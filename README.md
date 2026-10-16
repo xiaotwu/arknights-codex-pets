@@ -1,100 +1,108 @@
-# arknights-codex-pets
+# Arknights Codex Pets
 
-《明日方舟》角色同人动画桌宠：**普瑞赛斯（Priestess）**与**塑心（Virtuosa）**。提供完整动画图集、Codex 本地兼容包、预览和角色资料。
+**English** | [简体中文](README.zh-CN.md)
 
-| 角色 | 完整图集 v2 | 本地兼容包 v1 | 角色设定 |
-| --- | --- | --- | --- |
-| 普瑞赛斯 Priestess | [priestess.png](priestess.png) | [codex/priestess](codex/priestess) | [角色分析](docs/priestess.md) |
-| 塑心 Virtuosa | [virtuosa.png](virtuosa.png) | [codex/virtuosa](codex/virtuosa) | [角色设定](docs/virtuosa.md) |
+A growing collection of fan-made *Arknights* animated companions for ChatGPT and Codex. Each character has a stable ID, importable sprite sheets, previews, and character notes.
 
-![普瑞赛斯待机](previews/priestess-idle.gif)
-![塑心待机](previews/virtuosa-idle.gif)
+**[Browse the character catalog](CATALOG.md)** to choose a character and download its files. The catalog is generated from [pets.json](pets.json), so new characters can be added without rewriting this guide.
 
-## 选择导入方式
+## Choose an import method
 
-| 使用环境 | 推荐方式 | 使用的文件 |
+| Environment | Method | File or package |
 | --- | --- | --- |
-| 可调用 Pets 插件的 ChatGPT Work / Codex 聊天 | 上传完整 PNG，让助手校验、创建并选用 | 根目录的 `priestess.png` 或 `virtuosa.png` |
-| 读取本地自定义宠物的桌面客户端 / Codex CLI | 安装本地兼容包 | `codex/<角色名>/pet.json` 与 `spritesheet.webp` |
-| 提供 Upload pet 的 ChatGPT 网页设置 | 上传 v1 兼容图集 | `codex/<角色名>/spritesheet.webp` |
+| ChatGPT Work / Codex chat with the Pets plugin | Upload the full sprite sheet and ask the assistant to validate, create, and select the pet | `<character-id>.png` |
+| Desktop client / Codex CLI using local custom pets | Install the local compatibility package | `codex/<character-id>/` |
+| ChatGPT web with an Upload pet setting | Upload the v1 compatibility sprite sheet | `codex/<character-id>/spritesheet.webp` |
 
-Pets 的入口与可用性取决于账号、工作区和客户端版本。获取仓库文件后，再按以下步骤导入。
+Choose files from the catalog; available Pets features depend on your account, workspace, and client version.
 
-## 方法一 通过 Pets 插件导入完整图集
+## Import through the Pets plugin
 
-1. 下载 [priestess.png](https://raw.githubusercontent.com/xiaotwu/arknights-codex-pets/main/priestess.png) 或 [virtuosa.png](https://raw.githubusercontent.com/xiaotwu/arknights-codex-pets/main/virtuosa.png)，保留原始尺寸和透明度。
-2. 在能够调用 **Pets** 插件的 ChatGPT / Codex 聊天中上传该文件。Codex 本地任务也可以直接读取已授权的仓库文件。
-3. 发送下面的提示词，把名字替换为对应角色：
+1. Open the [catalog](CATALOG.md) and download the character's **Full PNG** at its original size and transparency.
+2. Upload it to a chat that can call the **Pets** plugin. A local Codex task can also read a repository file you have authorized it to access.
+3. Replace `CHARACTER_NAME` in this prompt:
 
 ```text
-请使用 Pets 插件，把我提供的完整透明动画图集导入为名为「普瑞赛斯」的宠物。
-先校验图集，校验通过后创建并选用。使用现有图集，无需重新绘制。
+Use the Pets plugin to import the attached complete transparent sprite sheet
+as a pet named CHARACTER_NAME. Validate it first, then create and select the pet.
+Use the existing sprite sheet without redrawing it.
 ```
 
-塑心使用名字「塑心」和文件 `virtuosa.png`。可附上对应的 `docs/` 角色资料作为名称、描述和后续创作参考。
+Character notes linked in the catalog can supply the name, description, and creative context. Full v2 sheets use 1536 × 2288 pixels, nine animation states, and sixteen look directions. Check each entry in `pets.json` for its exact format.
 
-这两个 PNG 均为 **1536 × 2288 的 v2 图集**，含九种基础动作和十六个视线方向；已通过本次 Pets 插件环境的格式校验。助手应完成图集校验、创建和选用，再核对当前宠物。
+If a catalog entry includes a **Public share** link, you can instead send that link to a Pets-enabled assistant and ask it to import and select the pet. This creates your own copy. The sprite sheet remains available if a share link expires or is withdrawn.
 
-### 普瑞赛斯分享链接
+## Install a local compatibility package
 
-[直接获取普瑞赛斯的 Pets 分享链接](https://chatgpt.com/s/sharepet_6ad1706508f88191bf295be53b0ad12e)
-
-把该链接发给启用了 Pets 的助手，并说「请导入并选用这个 Pet」。此流程会在接收者账号创建副本。分享链接失效时，可改用仓库中的 PNG。
-
-## 方法二 安装 Codex 本地兼容包
-
-克隆仓库，或在 GitHub 点击 **Code → Download ZIP** 并解压：
+Clone this repository, or use **Code → Download ZIP** on GitHub and extract it:
 
 ```bash
 git clone https://github.com/xiaotwu/arknights-codex-pets.git
 cd arknights-codex-pets
+python3 install.py --list
+```
+
+Select an ID from the list, then replace `CHARACTER_ID` below:
+
+```bash
+python3 install.py CHARACTER_ID
+```
+
+You can pass multiple IDs. To install **all available packages**, omit the IDs:
+
+```bash
 python3 install.py
 ```
 
-Windows 上可使用 `py -3 install.py`。仅安装其中一个角色：
+On Windows, use `py -3` instead of `python3` if needed. Use `--dest /path/to/pets` to choose a different pets directory.
 
-```bash
-python3 install.py priestess
-python3 install.py virtuosa
-```
-
-安装脚本将兼容包复制到 `$CODEX_HOME/pets/`；未设置 `CODEX_HOME` 时使用用户目录下的 `.codex/pets/`。已存在的同名目录会使安装停止，避免覆盖现有宠物。也可以用 `--dest /path/to/pets` 指定目标宠物目录。
-
-安装后的结构为：
+The installer discovers packages in `codex/` automatically. It copies them to `$CODEX_HOME/pets/`, or `~/.codex/pets/` when `CODEX_HOME` is unset, and refuses to replace existing character directories.
 
 ```text
 <CODEX_HOME>/pets/
-├── priestess/
-│   ├── pet.json
-│   └── spritesheet.webp
-└── virtuosa/
+└── <character-id>/
     ├── pet.json
     └── spritesheet.webp
 ```
 
-在提供宠物设置的桌面客户端打开 **Settings → Pets → Refresh**，选择普瑞赛斯或塑心。Codex CLI 可输入 `/pets` 打开选择器；需要支持图片显示的终端。桌面本地宠物与网页端的宠物分别管理。参见 [OpenAI Pets 文档](https://learn.chatgpt.com/docs/pets)。
+After installation, use **Settings → Pets → Refresh** in a desktop client that provides these controls, or `/pets` in a compatible Codex CLI session. Local pets and web pets are managed separately. See the [official Pets documentation](https://learn.chatgpt.com/docs/pets).
 
-本地包结构依据 [OpenAI 官方 hatch-pet 技能](https://github.com/openai/skills/blob/main/skills/.curated/hatch-pet/SKILL.md)。兼容包使用 **1536 × 1872 的 v1 图集**：从完整版本无损提取前九行动作，保留九种基础动作；十六方向视线包含在根目录的 v2 PNG 中。
+The local package layout follows OpenAI's [hatch-pet skill](https://github.com/openai/skills/blob/main/skills/.curated/hatch-pet/SKILL.md). Its v1 sheet preserves the first nine animation rows at 1536 × 1872 pixels; the additional sixteen look directions are in the full v2 PNG.
 
-## 方法三 在 ChatGPT 网页上传
+## Upload through ChatGPT web settings
 
-如果账号提供此入口，打开 **Settings → Personalization → Pet → Select pet → Upload pet**，选择 [普瑞赛斯 v1 WebP](codex/priestess/spritesheet.webp) 或 [塑心 v1 WebP](codex/virtuosa/spritesheet.webp)。截至 2026 年 10 月 15 日，[官方网页上传说明](https://learn.chatgpt.com/docs/pets)要求透明 PNG / WebP、1536 × 1872，且不超过 20 MiB；该入口使用仓库的 v1 兼容文件。
+If available, open **Settings → Personalization → Pet → Select pet → Upload pet** and upload the character's v1 `spritesheet.webp` from the catalog's local package. As of October 15, 2026, [the official upload specification](https://learn.chatgpt.com/docs/pets) requires a transparent PNG or WebP, 1536 × 1872 pixels, at most 20 MiB.
 
-## 文件与动画说明
+## Repository layout
 
-- 根目录的 `priestess.png`、`virtuosa.png`：完整透明图集，8 列 × 11 行，每格 192 × 208，73 个有效帧。
-- `codex/`：本地可安装的 v1 兼容包，8 列 × 9 行，57 个有效帧。
-- `pets.json`：通用角色目录与文件信息；安装使用各包内的 `pet.json`。
-- `previews/`：待机、全部动作、视线循环与逐帧总览。GIF 用于预览，导入时使用 PNG / WebP 图集。
-- `docs/`：游戏设定、性格分析与桌宠演绎说明，包含部分剧情信息。
-- `SHA256SUMS`：可用于核对下载的图集与仓库版本一致。
+```text
+<character-id>.png                  Full sprite sheet
+codex/<character-id>/pet.json       Local package manifest
+codex/<character-id>/spritesheet.webp
+previews/<character-id>-*.gif       Animation previews
+docs/<character-id>.md              Character notes and sources
+pets.json                          Character catalog metadata
+CATALOG.md / CATALOG.zh-CN.md       Generated character catalogs
+scripts/update_catalog.py          Catalog and checksum generator
+SHA256SUMS                         Download integrity checks
+```
 
-九种基础动作依次为待机、向右移动、向左移动、招手、轻跃、受挫、等待输入、专注工作、检查成果。导入时保留原始图集尺寸、透明度和行列布局。
+GIFs are previews; use PNG or WebP sprite sheets for import. Preserve the original dimensions, transparency, and cell layout.
 
-完整预览：[普瑞赛斯动作](previews/priestess-animations.gif) · [塑心动作](previews/virtuosa-animations.gif) · [普瑞赛斯视线](previews/priestess-look.gif) · [塑心视线](previews/virtuosa-look.gif)。
+## Add a character
 
-## 角色与素材来源
+1. Choose a unique lowercase English ID, using hyphens between words when needed. Use it consistently in filenames, the package directory, and the manifest's `id`.
+2. Add the full sprite sheet, local compatibility package, previews, and character notes using the layout above. Follow the existing package manifest format.
+3. Add an entry to `pets.json` with the character's names, description, provided file formats, relative paths, and correct SHA-256 values. Add a public share URL only when one is available. Keep game facts, cited sources, and creative interpretation distinct in the character notes.
+4. Validate the sprite sheets, then regenerate both catalogs and download checksums:
 
-普瑞赛斯使用参考角色图生成 Q 版动画；塑心沿用已有 Q 版动画，并补齐游戏设定。角色解读、引用和创作取舍见各自的角色文档。
+```bash
+python3 scripts/update_catalog.py
+python3 install.py --list
+```
 
-本项目为非官方同人桌宠整理项目，与鹰角网络、Hypergryph、Yostar 或 OpenAI 无官方合作关系。《明日方舟》角色及相关原作内容的权益归其原权利方所有。
+The generator checks referenced files, metadata, and declared checksums. Character-specific content belongs in the catalog and character notes; these English and Chinese import guides can stay the same as the collection grows.
+
+## Credits
+
+This is an unofficial fan project with no official affiliation with Hypergryph, Yostar, or OpenAI. *Arknights* characters and original game material belong to their respective rights holders. See each character's notes for references and adaptation details.
