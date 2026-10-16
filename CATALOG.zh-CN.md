@@ -6,7 +6,7 @@
 
 本目录由 [pets.json](pets.json) 自动生成。导入步骤请参阅 [中文说明](README.zh-CN.md)。
 
-| 角色 | ID | 完整 PNG | Codex 本地包 | 角色设定 | 预览 | 公开分享 |
-| --- | --- | --- | --- | --- | --- | --- |
-| 普瑞赛斯 / Priestess | `priestess` | [PNG](priestess.png) | [本地包](codex/priestess/) | [设定](docs/priestess.md) | [待机](previews/priestess-idle.gif) · [动作](previews/priestess-animations.gif) · [视线](previews/priestess-look.gif) · [总览](previews/priestess-contact-sheet.png) | [导入链接](https://chatgpt.com/s/sharepet_6ad1706508f88191bf295be53b0ad12e) |
-| 塑心 / Virtuosa | `virtuosa` | [PNG](virtuosa.png) | [本地包](codex/virtuosa/) | [设定](docs/virtuosa.md) | [待机](previews/virtuosa-idle.gif) · [动作](previews/virtuosa-animations.gif) · [视线](previews/virtuosa-look.gif) · [总览](previews/virtuosa-contact-sheet.png) | — |
+| 角色 | ID | 完整 PNG | Codex 本地包 | 角色设定 | 预览 | codex-pets.net | 公开分享 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 普瑞赛斯 / Priestess | `priestess` | [PNG](priestess.png) | [本地包](codex/priestess/) | [设定](docs/priestess.md) | [待机](previews/priestess-idle.gif) · [动作](previews/priestess-animations.gif) · [视线](previews/priestess-look.gif) · [总览](previews/priestess-contact-sheet.png) | [网站导入](https://codex-pets.net/#/pets/arknights-priestess) · `arknights-priestess` | [导入链接](https://chatgpt.com/s/sharepet_6ad1706508f88191bf295be53b0ad12e) |
+| 塑心 / Virtuosa | `virtuosa` | [PNG](virtuosa.png) | [本地包](codex/virtuosa/) | [设定](docs/virtuosa.md) | [待机](previews/virtuosa-idle.gif) · [动作](previews/virtuosa-animations.gif) · [视线](previews/virtuosa-look.gif) · [总览](previews/virtuosa-contact-sheet.png) | [网站导入](https://codex-pets.net/#/pets/arknights-virtuosa) · `arknights-virtuosa` | — |

@@ -11,6 +11,7 @@ A growing collection of fan-made *Arknights* animated companions for ChatGPT and
 | Environment | Method | File or package |
 | --- | --- | --- |
 | ChatGPT Work / Codex chat with the Pets plugin | Upload the full sprite sheet and ask the assistant to validate, create, and select the pet | `<character-id>.png` |
+| Codex via codex-pets.net | Open the character page and choose **Install in Codex**, or use its displayed terminal command | Catalog's **codex-pets.net** link |
 | Desktop client / Codex CLI using local custom pets | Install the local compatibility package | `codex/<character-id>/` |
 | ChatGPT web with an Upload pet setting | Upload the v1 compatibility sprite sheet | `codex/<character-id>/spritesheet.webp` |
 
@@ -31,6 +32,22 @@ Use the existing sprite sheet without redrawing it.
 Character notes linked in the catalog can supply the name, description, and creative context. Full v2 sheets use 1536 × 2288 pixels, nine animation states, and sixteen look directions. Check each entry in `pets.json` for its exact format.
 
 If a catalog entry includes a **Public share** link, you can instead send that link to a Pets-enabled assistant and ask it to import and select the pet. This creates your own copy. The sprite sheet remains available if a share link expires or is withdrawn.
+
+## Import through codex-pets.net
+
+1. Open the [catalog](CATALOG.md) and follow a character's **codex-pets.net** link, when available.
+2. On that character page, choose **Install in Codex**. It opens Codex with an installation request; review and complete the installation there.
+3. After installation, select the character using the pet controls supported by your Codex client.
+
+Alternatively, copy the terminal command displayed on the character page and run it with Node.js / `npx` available:
+
+```bash
+npx codex-pets add SITE_PET_ID
+```
+
+Use the site's ID, which can differ from this repository's character ID. Our site entries use the `arknights-` prefix. The site also offers **Download sprite kit**, a `.codex-pet.zip` containing `pet.json` and `spritesheet.webp`; follow the site's guidance for that download.
+
+The published site kits use the complete v2 sheet at 1536 × 2288, including sixteen look directions. The repository's local compatibility packages below use v1 instead. Site availability and supported installation features depend on the service and your client.
 
 ## Install a local compatibility package
 
@@ -93,7 +110,7 @@ GIFs are previews; use PNG or WebP sprite sheets for import. Preserve the origin
 
 1. Choose a unique lowercase English ID, using hyphens between words when needed. Use it consistently in filenames, the package directory, and the manifest's `id`.
 2. Add the full sprite sheet, local compatibility package, previews, and character notes using the layout above. Follow the existing package manifest format.
-3. Add an entry to `pets.json` with the character's names, description, provided file formats, relative paths, and correct SHA-256 values. Add a public share URL only when one is available. Keep game facts, cited sources, and creative interpretation distinct in the character notes.
+3. Add an entry to `pets.json` with the character's names, description, provided file formats, relative paths, and correct SHA-256 values. Add a public share URL only when one is available. For a published codex-pets.net entry, add optional `codexPets` metadata with its site `id` and `url`; use an `arknights-` prefix for the site ID while keeping the repository ID unchanged. Keep game facts, cited sources, and creative interpretation distinct in the character notes.
 4. Validate the sprite sheets, then regenerate both catalogs and download checksums:
 
 ```bash

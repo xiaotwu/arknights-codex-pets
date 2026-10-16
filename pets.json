@@ -58,7 +58,11 @@
         "look": "previews/priestess-look.gif",
         "contactSheet": "previews/priestess-contact-sheet.png"
       },
-      "shareUrl": "https://chatgpt.com/s/sharepet_6ad1706508f88191bf295be53b0ad12e"
+      "shareUrl": "https://chatgpt.com/s/sharepet_6ad1706508f88191bf295be53b0ad12e",
+      "codexPets": {
+        "id": "arknights-priestess",
+        "url": "https://codex-pets.net/#/pets/arknights-priestess"
+      }
     },
     {
       "id": "virtuosa",
@@ -116,6 +120,10 @@
         "animations": "previews/virtuosa-animations.gif",
         "look": "previews/virtuosa-look.gif",
         "contactSheet": "previews/virtuosa-contact-sheet.png"
+      },
+      "codexPets": {
+        "id": "arknights-virtuosa",
+        "url": "https://codex-pets.net/#/pets/arknights-virtuosa"
       }
     }
   ]
