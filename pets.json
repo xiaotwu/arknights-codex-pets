@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "pets": [
+    {
+      "id": "priestess",
+      "displayName": "普瑞赛斯",
+      "englishName": "Priestess",
+      "description": "安静而笃定的研究者，以温柔的目光、专注思考和耐心守候陪你工作。",
+      "game": "Arknights",
+      "characterNotes": "docs/priestess.md",
+      "full": {
+        "file": "priestess.png",
+        "spriteVersionNumber": 2,
+        "format": "PNG",
+        "width": 1536,
+        "height": 2288,
+        "cellWidth": 192,
+        "cellHeight": 208,
+        "framesPerRow": [
+          6,
+          8,
+          8,
+          4,
+          5,
+          8,
+          6,
+          6,
+          6,
+          8,
+          8
+        ],
+        "sha256": "15cba3767c10decc48aded2db829c9969ddb6903a547439567d644ea8713ce2b"
+      },
+      "codexLocal": {
+        "directory": "codex/priestess",
+        "manifest": "codex/priestess/pet.json",
+        "spritesheet": "codex/priestess/spritesheet.webp",
+        "spriteVersionNumber": 1,
+        "format": "WebP lossless",
+        "width": 1536,
+        "height": 1872,
+        "framesPerRow": [
+          6,
+          8,
+          8,
+          4,
+          5,
+          8,
+          6,
+          6,
+          6
+        ],
+        "sha256": "99982045d1d6a26297e998a6890a4196cab15a21ed9f44a35c1e0fc80dd9a874"
+      },
+      "previews": {
+        "idle": "previews/priestess-idle.gif",
+        "animations": "previews/priestess-animations.gif",
+        "look": "previews/priestess-look.gif",
+        "contactSheet": "previews/priestess-contact-sheet.png"
+      },
+      "shareUrl": "https://chatgpt.com/s/sharepet_6ad1706508f88191bf295be53b0ad12e"
+    },
+    {
+      "id": "virtuosa",
+      "displayName": "塑心",
+      "englishName": "Virtuosa",
+      "description": "拉特兰的萨科塔音乐家阿尔图罗，以从容微笑和安静倾听展现优雅、好奇而难以看透的气质。",
+      "game": "Arknights",
+      "characterNotes": "docs/virtuosa.md",
+      "full": {
+        "file": "virtuosa.png",
+        "spriteVersionNumber": 2,
+        "format": "PNG",
+        "width": 1536,
+        "height": 2288,
+        "cellWidth": 192,
+        "cellHeight": 208,
+        "framesPerRow": [
+          6,
+          8,
+          8,
+          4,
+          5,
+          8,
+          6,
+          6,
+          6,
+          8,
+          8
+        ],
+        "sha256": "3e94fd5e2dfc825b59b6d8c636458ba554ab16b645748a183ce95bfa3b79d287"
+      },
+      "codexLocal": {
+        "directory": "codex/virtuosa",
+        "manifest": "codex/virtuosa/pet.json",
+        "spritesheet": "codex/virtuosa/spritesheet.webp",
+        "spriteVersionNumber": 1,
+        "format": "WebP lossless",
+        "width": 1536,
+        "height": 1872,
+        "framesPerRow": [
+          6,
+          8,
+          8,
+          4,
+          5,
+          8,
+          6,
+          6,
+          6
+        ],
+        "sha256": "7b7d5dde1f0576201240ff882a1252a8d83a9f98dd8c61092a891bf8f99d6c4e"
+      },
+      "previews": {
+        "idle": "previews/virtuosa-idle.gif",
+        "animations": "previews/virtuosa-animations.gif",
+        "look": "previews/virtuosa-look.gif",
+        "contactSheet": "previews/virtuosa-contact-sheet.png"
+      }
+    }
+  ]
+}
