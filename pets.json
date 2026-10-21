@@ -125,6 +125,68 @@
         "id": "arknights-virtuosa",
         "url": "https://codex-pets.net/#/pets/arknights-virtuosa"
       }
+    },
+    {
+      "id": "clementia",
+      "displayName": "克莱门莎",
+      "englishName": "Clementia",
+      "description": "从容而细心的阿戈尔来客，以温和微笑、专注思考和耐心守候陪你工作。",
+      "game": "Arknights",
+      "characterNotes": "docs/clementia.md",
+      "full": {
+        "file": "clementia.png",
+        "spriteVersionNumber": 2,
+        "format": "PNG",
+        "width": 1536,
+        "height": 2288,
+        "cellWidth": 192,
+        "cellHeight": 208,
+        "framesPerRow": [
+          6,
+          8,
+          8,
+          4,
+          5,
+          8,
+          6,
+          6,
+          6,
+          8,
+          8
+        ],
+        "sha256": "ac60e198cd6c934047afaaa636f861d9485f274b88e65da1614573e6e303b53d"
+      },
+      "codexLocal": {
+        "directory": "codex/clementia",
+        "manifest": "codex/clementia/pet.json",
+        "spritesheet": "codex/clementia/spritesheet.webp",
+        "spriteVersionNumber": 1,
+        "format": "WebP lossless",
+        "width": 1536,
+        "height": 1872,
+        "framesPerRow": [
+          6,
+          8,
+          8,
+          4,
+          5,
+          8,
+          6,
+          6,
+          6
+        ],
+        "sha256": "4502142acd2af9e834193d235fa25d8bcdbf2942258c14ae671935c8065f0c47"
+      },
+      "previews": {
+        "idle": "previews/clementia-idle.gif",
+        "animations": "previews/clementia-animations.gif",
+        "look": "previews/clementia-look.gif",
+        "contactSheet": "previews/clementia-contact-sheet.png"
+      },
+      "codexPets": {
+        "id": "arknights-clementia",
+        "url": "https://codex-pets.net/#/pets/arknights-clementia"
+      }
     }
   ]
 }
