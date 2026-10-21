@@ -1,8 +1,8 @@
-# Arknights Codex Pets
+# Arknights & Endfield Codex Pets
 
 **English** | [简体中文](README.zh-CN.md)
 
-A growing collection of fan-made *Arknights* animated companions for ChatGPT and Codex. Each character has a stable ID, importable sprite sheets, previews, and character notes.
+A growing collection of fan-made *Arknights* and *Arknights: Endfield* animated companions for ChatGPT and Codex. Each character has a stable ID, importable sprite sheets, previews, and character notes. The catalog separates the two games into their own sections.
 
 **[Browse the character catalog](CATALOG.md)** to choose a character and download its files. The catalog is generated from [pets.json](pets.json), so new characters can be added without rewriting this guide.
 
@@ -45,7 +45,7 @@ Alternatively, copy the terminal command displayed on the character page and run
 npx codex-pets add SITE_PET_ID
 ```
 
-Use the site's ID, which can differ from this repository's character ID. Our site entries use the `arknights-` prefix. The site also offers **Download sprite kit**, a `.codex-pet.zip` containing `pet.json` and `spritesheet.webp`; follow the site's guidance for that download.
+Use the site's ID, which can differ from this repository's character ID. Our site entries use the `arknights-` prefix; *Arknights: Endfield* entries use `arknights-endfield-<character-name>`. The site also offers **Download sprite kit**, a `.codex-pet.zip` containing `pet.json` and `spritesheet.webp`; follow the site's guidance for that download.
 
 The published site kits use the complete v2 sheet at 1536 × 2288, including sixteen look directions. The repository's local compatibility packages below use v1 instead. Site availability and supported installation features depend on the service and your client.
 
@@ -108,9 +108,9 @@ GIFs are previews; use PNG or WebP sprite sheets for import. Preserve the origin
 
 ## Add a character
 
-1. Choose a unique lowercase English ID, using hyphens between words when needed. Use it consistently in filenames, the package directory, and the manifest's `id`.
+1. Choose a unique lowercase English ID, using hyphens between words when needed. For *Arknights: Endfield*, use `arknights-endfield-<character-name>` for both repository and website IDs. Use the ID consistently in filenames, the package directory, and the manifest's `id`; set `game` to `Arknights` or `Arknights: Endfield` to select its catalog section.
 2. Add the full sprite sheet, local compatibility package, previews, and character notes using the layout above. Follow the existing package manifest format.
-3. Add an entry to `pets.json` with the character's names, description, provided file formats, relative paths, and correct SHA-256 values. By default, create a public ChatGPT Pets share link for every character and record the returned URL in `shareUrl`; reuse an existing valid link. If sharing is unavailable or explicitly restricted, document the exception instead of inventing a URL. For a published codex-pets.net entry, add optional `codexPets` metadata with its site `id` and `url`; use an `arknights-` prefix for the site ID while keeping the repository ID unchanged. Keep game facts, cited sources, and creative interpretation distinct in the character notes.
+3. Add an entry to `pets.json` with the character's names, description, provided file formats, relative paths, and correct SHA-256 values. By default, create a public ChatGPT Pets share link for every character and record the returned URL in `shareUrl`; reuse an existing valid link. If sharing is unavailable or explicitly restricted, document the exception instead of inventing a URL. For a published codex-pets.net entry, add optional `codexPets` metadata with its site `id` and `url`; follow the game-specific ID rule above and preserve existing IDs. Keep game facts, cited sources, and creative interpretation distinct in the character notes.
 4. Validate the sprite sheets, then regenerate both catalogs and download checksums:
 
 ```bash
@@ -122,4 +122,4 @@ The generator checks referenced files, metadata, and declared checksums. Charact
 
 ## Credits
 
-This is an unofficial fan project with no official affiliation with Hypergryph, Yostar, or OpenAI. *Arknights* characters and original game material belong to their respective rights holders. See each character's notes for references and adaptation details.
+This is an unofficial fan project with no official affiliation with Hypergryph, Yostar, or OpenAI. *Arknights* and *Arknights: Endfield* characters and original game material belong to their respective rights holders. See each character's notes for references and adaptation details.

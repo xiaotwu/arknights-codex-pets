@@ -4,10 +4,18 @@
 
 [English](CATALOG.md) | [简体中文](CATALOG.zh-CN.md)
 
-Generated from [pets.json](pets.json). See the [README](README.md) for import instructions.
+Grouped by game and generated from [pets.json](pets.json). See the [README](README.md) for import instructions.
+
+## Arknights
 
 | Character | ID | Full PNG | Codex package | Character notes | Previews | codex-pets.net | Public share |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Clementia / 克莱门莎 | `clementia` | [PNG](clementia.png) | [Package](codex/clementia/) | [Notes](docs/clementia.md) | [Idle](previews/clementia-idle.gif) · [Animations](previews/clementia-animations.gif) · [Gaze](previews/clementia-look.gif) · [Contact sheet](previews/clementia-contact-sheet.png) | [Website import](https://codex-pets.net/#/pets/arknights-clementia) · `arknights-clementia` | [Import link](https://chatgpt.com/s/sharepet_6ad8683770888191ba6e9e26c35cb9c8) |
 | Priestess / 普瑞赛斯 | `priestess` | [PNG](priestess.png) | [Package](codex/priestess/) | [Notes](docs/priestess.md) | [Idle](previews/priestess-idle.gif) · [Animations](previews/priestess-animations.gif) · [Gaze](previews/priestess-look.gif) · [Contact sheet](previews/priestess-contact-sheet.png) | [Website import](https://codex-pets.net/#/pets/arknights-priestess) · `arknights-priestess` | [Import link](https://chatgpt.com/s/sharepet_6ad1706508f88191bf295be53b0ad12e) |
 | Virtuosa / 塑心 | `virtuosa` | [PNG](virtuosa.png) | [Package](codex/virtuosa/) | [Notes](docs/virtuosa.md) | [Idle](previews/virtuosa-idle.gif) · [Animations](previews/virtuosa-animations.gif) · [Gaze](previews/virtuosa-look.gif) · [Contact sheet](previews/virtuosa-contact-sheet.png) | [Website import](https://codex-pets.net/#/pets/arknights-virtuosa) · `arknights-virtuosa` | [Import link](https://chatgpt.com/s/sharepet_6ad868358ea88191bed9284b2cfa6a38) |
+
+## Arknights: Endfield
+
+| Character | ID | Full PNG | Codex package | Character notes | Previews | codex-pets.net | Public share |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Si / 祀 | `arknights-endfield-si` | [PNG](arknights-endfield-si.png) | [Package](codex/arknights-endfield-si/) | [Notes](docs/arknights-endfield-si.md) | [Idle](previews/arknights-endfield-si-idle.gif) · [Animations](previews/arknights-endfield-si-animations.gif) · [Gaze](previews/arknights-endfield-si-look.gif) · [Contact sheet](previews/arknights-endfield-si-contact-sheet.png) | [Website import](https://codex-pets.net/#/pets/arknights-endfield-si) · `arknights-endfield-si` | [Import link](https://chatgpt.com/s/sharepet_6ad949b3c0d08191ad1966c0765e2895) |
