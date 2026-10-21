@@ -124,7 +124,8 @@
       "codexPets": {
         "id": "arknights-virtuosa",
         "url": "https://codex-pets.net/#/pets/arknights-virtuosa"
-      }
+      },
+      "shareUrl": "https://chatgpt.com/s/sharepet_6ad868358ea88191bed9284b2cfa6a38"
     },
     {
       "id": "clementia",
@@ -186,7 +187,8 @@
       "codexPets": {
         "id": "arknights-clementia",
         "url": "https://codex-pets.net/#/pets/arknights-clementia"
-      }
+      },
+      "shareUrl": "https://chatgpt.com/s/sharepet_6ad8683770888191ba6e9e26c35cb9c8"
     }
   ]
 }

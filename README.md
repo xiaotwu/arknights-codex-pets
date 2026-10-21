@@ -31,7 +31,7 @@ Use the existing sprite sheet without redrawing it.
 
 Character notes linked in the catalog can supply the name, description, and creative context. Full v2 sheets use 1536 × 2288 pixels, nine animation states, and sixteen look directions. Check each entry in `pets.json` for its exact format.
 
-If a catalog entry includes a **Public share** link, you can instead send that link to a Pets-enabled assistant and ask it to import and select the pet. This creates your own copy. The sprite sheet remains available if a share link expires or is withdrawn.
+Every character includes a **Public share** link by default. Send the catalog's link to a Pets-enabled assistant and ask it to import and select the pet. This creates your own copy. The sprite sheet remains available if a share link expires or is withdrawn.
 
 ## Import through codex-pets.net
 
@@ -110,7 +110,7 @@ GIFs are previews; use PNG or WebP sprite sheets for import. Preserve the origin
 
 1. Choose a unique lowercase English ID, using hyphens between words when needed. Use it consistently in filenames, the package directory, and the manifest's `id`.
 2. Add the full sprite sheet, local compatibility package, previews, and character notes using the layout above. Follow the existing package manifest format.
-3. Add an entry to `pets.json` with the character's names, description, provided file formats, relative paths, and correct SHA-256 values. Add a public share URL only when one is available. For a published codex-pets.net entry, add optional `codexPets` metadata with its site `id` and `url`; use an `arknights-` prefix for the site ID while keeping the repository ID unchanged. Keep game facts, cited sources, and creative interpretation distinct in the character notes.
+3. Add an entry to `pets.json` with the character's names, description, provided file formats, relative paths, and correct SHA-256 values. By default, create a public ChatGPT Pets share link for every character and record the returned URL in `shareUrl`; reuse an existing valid link. If sharing is unavailable or explicitly restricted, document the exception instead of inventing a URL. For a published codex-pets.net entry, add optional `codexPets` metadata with its site `id` and `url`; use an `arknights-` prefix for the site ID while keeping the repository ID unchanged. Keep game facts, cited sources, and creative interpretation distinct in the character notes.
 4. Validate the sprite sheets, then regenerate both catalogs and download checksums:
 
 ```bash
