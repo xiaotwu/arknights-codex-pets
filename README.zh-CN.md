@@ -81,6 +81,8 @@ Windows 上可按需将 `python3` 换成 `py -3`。使用 `--dest /path/to/pets`
     └── spritesheet.webp
 ```
 
+更新已有本地宠物时，先下载最新角色包或更新仓库副本。备份并将原来的 `<CODEX_HOME>/pets/<character-id>/` 整个目录移到宠物目录之外，再使用相同 ID 运行安装脚本；旧目录仍存在时，脚本会停止。角色目录中的链接始终指向当前发布的文件和预览。
+
 安装后，在提供此设置的桌面客户端打开 **Settings → Pets → Refresh**，或在兼容的 Codex CLI 会话中使用 `/pets` 选择角色。本地宠物与网页宠物分别管理，详见 [OpenAI Pets 文档](https://learn.chatgpt.com/docs/pets)。
 
 本地包结构依据 [OpenAI hatch-pet 技能](https://github.com/openai/skills/blob/main/skills/.curated/hatch-pet/SKILL.md)。v1 图集以 1536 × 1872 保留前九行动作，额外的十六方向视线位于完整 v2 PNG 中。

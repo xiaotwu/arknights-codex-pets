@@ -218,7 +218,7 @@
           8,
           8
         ],
-        "sha256": "dca2f131d30fa0f8b4bfb8c8fff8eb171406ef323c4619986120d81341714f4c"
+        "sha256": "82effd55d8b2384523b3760f50215b6205d7d21693cd11b1639e98644b4f55c5"
       },
       "codexLocal": {
         "directory": "codex/arknights-endfield-si",
@@ -239,13 +239,15 @@
           6,
           6
         ],
-        "sha256": "3af74f304211ea7086bcb1666e4f9f0e9b8b705f48e2df6f07a99b4d4a7bbb7b"
+        "sha256": "a28034f333054395b5d2f3ef010a59fb4bba1d0eb2ec857ac38e02e8e9ae159f"
       },
       "previews": {
         "idle": "previews/arknights-endfield-si-idle.gif",
         "animations": "previews/arknights-endfield-si-animations.gif",
         "look": "previews/arknights-endfield-si-look.gif",
-        "contactSheet": "previews/arknights-endfield-si-contact-sheet.png"
+        "contactSheet": "previews/arknights-endfield-si-contact-sheet.png",
+        "runningRight": "previews/arknights-endfield-si-running-right.gif",
+        "runningLeft": "previews/arknights-endfield-si-running-left.gif"
       },
       "codexPets": {
         "id": "arknights-endfield-si",

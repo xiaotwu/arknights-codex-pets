@@ -82,6 +82,8 @@ The installer discovers packages in `codex/` automatically. It copies them to `$
     └── spritesheet.webp
 ```
 
+To update an existing local pet, download the latest package or update your repository checkout. Back up and move the existing `<CODEX_HOME>/pets/<character-id>/` directory outside the pets directory, then run the installer for that same ID again. The installer stops if the old directory is still present. The catalog links always identify the current published files and previews.
+
 After installation, use **Settings → Pets → Refresh** in a desktop client that provides these controls, or `/pets` in a compatible Codex CLI session. Local pets and web pets are managed separately. See the [official Pets documentation](https://learn.chatgpt.com/docs/pets).
 
 The local package layout follows OpenAI's [hatch-pet skill](https://github.com/openai/skills/blob/main/skills/.curated/hatch-pet/SKILL.md). Its v1 sheet preserves the first nine animation rows at 1536 × 1872 pixels; the additional sixteen look directions are in the full v2 PNG.

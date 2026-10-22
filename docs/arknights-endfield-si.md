@@ -39,7 +39,7 @@ An unofficial *Arknights: Endfield* animated companion. Repository, package, fil
 | 动作 | 角色化表达 |
 | --- | --- |
 | 待机 | 平稳呼吸、一次自然眨眼、发尾和尾端轻微随动 |
-| 左右移动 | 独立绘制两侧奔跑，手臂与对应腿反向摆动、左右迈步交替，发尾与翼边小幅跟随；左腕珠串不换边 |
+| 左右移动 | 双向独立的八帧奔跑循环，加大迈步与摆臂幅度；手臂与对侧腿配合前摆，肘膝自然弯曲，左右腿真实交替；左腕珠串不换边 |
 | 挥手 | 空手小幅招呼，略带“总算来了”的得意神情 |
 | 跳跃 | 蓄力、离地、最高点、下降、落稳；保持身体大小与真实高度变化 |
 | 受挫 | 微微鼓脸或掩唇，短暂别开目光后恢复，避免持续发怒 |
@@ -67,3 +67,9 @@ An unofficial *Arknights: Endfield* animated companion. Repository, package, fil
 - [Codex 本地 v1 兼容包](../codex/arknights-endfield-si/)：前九行动作。
 - [codex-pets.net](https://codex-pets.net/#/pets/arknights-endfield-si)：完整 v2 角色包。
 - 导入说明：[English](../README.md) / [中文](../README.zh-CN.md)。公开分享链接见角色目录。
+
+Running previews: [Right](../previews/arknights-endfield-si-running-right.gif) / [Left](../previews/arknights-endfield-si-running-left.gif).
+
+Both directions use eight distinct poses with wider strides, opposing arm and leg motion, and continuous preview timing. The bracelet stays on her left wrist.
+
+奔跑预览：[向右](../previews/arknights-endfield-si-running-right.gif) / [向左](../previews/arknights-endfield-si-running-left.gif)。
